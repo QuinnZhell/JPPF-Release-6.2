@@ -1,0 +1,9 @@
+/classes/
+/persistence*/
+*.log
+/report/
+/logs/
+/slave_nodes/
+/lib/
+/config/
+/build/

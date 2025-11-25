@@ -1,0 +1,11 @@
+<project>
+@header@
+@common@
+  <dependencies>
+    <dependency>
+      <groupId>org.jppf</groupId>
+      <artifactId>jppf-jmxremote-nio</artifactId>
+      <version>@version@</version>
+    </dependency>
+  </dependencies>
+</project>

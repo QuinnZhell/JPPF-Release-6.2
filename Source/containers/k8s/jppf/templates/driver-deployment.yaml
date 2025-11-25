@@ -1,0 +1,118 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-driver
+  labels:
+{{ include "jppf.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.driver.replicas }}
+  selector:
+    matchLabels:
+      app: jppf
+      comp: driver
+      release: "{{ .Release.Name }}"
+  template:
+    metadata:
+      labels:
+        app: jppf
+        comp: driver
+        release: "{{ .Release.Name }}"
+    spec:
+      #hostname: {{ .Values.jppf.serverHostName }}
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.registryName }}/{{ .Values.driver.imageRepository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+
+          env:
+            - name: JPPF_SUBNET
+              value: "172.16.238.0/24"
+            - name: JPPF_DRIVER_JVM_OPTIONS
+              value: "{{ .Values.driver.jvmOptions }}"
+            - name: JPPF_VERSION
+              value: "{{ .Values.jppf.version }}"
+            - name: JPPF_TLS_ENABLED
+              value: "{{ .Values.tls.enabled }}"
+            - name: JPPF_TLS_STORE_TYPE
+              value: "{{ .Values.tls.storeType }}"
+            - name: JPPF_SERIALIZATION
+              value: "{{ .Values.jppf.serialization }}"
+
+          ports:
+            - name: jppf
+              containerPort: 11111
+              hostPort: 11111
+              protocol: TCP
+            - name: jppf-tls
+              containerPort: 11443
+              hostPort: 11443
+              protocol: TCP
+
+          resources:
+            {{- toYaml .Values.driver.resources | nindent 12 }}
+
+          volumeMounts:
+          {{- if .Values.tls.enabled }}
+            - name: driver-tls-config
+              mountPath: /jppf-config
+          {{- end }}
+          {{- if .Values.driver.configOverrides }}
+            - name: driver-configuration
+              mountPath: /jppf-config-overrides
+          {{- end }}
+
+          {{- if .Values.driver.livenessProbe.enabled }}
+          livenessProbe:
+            tcpSocket:
+              {{- if .Values.tls.enabled }}
+              port: jppf-tls
+              {{- else }}
+              port: jppf
+              {{- end }}
+            {{- with .Values.driver.livenessProbe }}
+            initialDelaySeconds: {{ default 15 .initialDelaySeconds }}
+            periodSeconds: {{ default 30 .periodSeconds }}
+            timeoutSeconds: {{ default 5 .timeoutSeconds }}
+            {{- end }}
+          {{- end }}
+
+      volumes:
+        {{- if .Values.tls.enabled }}
+        - name: driver-tls-config
+          secret:
+            secretName: driver-tls-config
+            items:
+            - key: driverKeyStore
+              path: driver_keystore.ks
+            - key: driverKeyStorePassword
+              path: driver_keystore.txt
+            - key: clientTrustStore
+              path: client_truststore.ks
+            - key: clientTrustStorePassword
+              path: client_truststore.txt
+            - key: nodeTrustStore
+              path: node_truststore.ks
+            - key: nodeTrustStorePassword
+              path: node_truststore.txt
+        {{- end }}
+        {{- if .Values.driver.configOverrides }}
+        - name: driver-configuration
+          configMap:
+            name: driver-configuration
+            items:
+            - key: configOverrides
+              path: config-overrides.properties
+        {{- end }}
+
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

@@ -1,0 +1,9 @@
+/classes/
+/persistence/
+/slave_nodes/
+/templib/
+*.log
+*.lck
+*.csv
+*.ods
+*.jps

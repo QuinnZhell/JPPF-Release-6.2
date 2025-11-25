@@ -1,0 +1,29 @@
+sudo: false
+
+language: java
+
+install: true
+
+# ant-optional is needed for ant junit
+before_install:
+- sudo apt-get -qq update
+- sudo apt-get install ant-optional
+
+services:
+  - docker
+
+before_script:
+  - env -u _JAVA_OPTIONS
+
+script:
+  - ant build
+  - ant docker
+  - ant test.lite
+
+jdk:
+  - openjdk8
+
+#after_script:
+#- curl --ftp-create-dirs
+#       -T tests/all_results.zip
+#       ${CURL_URL_BASE}/build/all_results_master.zip

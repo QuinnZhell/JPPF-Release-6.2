@@ -1,0 +1,112 @@
+{{- if .Values.admin.enabled -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-admin-web
+  labels:
+{{ include "jppf.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.admin.replicas }}
+  selector:
+    matchLabels:
+      app: jppf
+      comp: admin
+      release: "{{ .Release.Name }}"
+  template:
+    metadata:
+      labels:
+        app: jppf
+        comp: admin
+        release: "{{ .Release.Name }}"
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.registryName }}/{{ .Values.admin.imageRepository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+
+          env:
+            - name: JPPF_VERSION
+              value: "{{ .Values.jppf.version }}"
+            - name: JPPF_SERVER_HOST
+              value: "{{ .Values.jppf.serverHostName }}"
+            - name: JPPF_TLS_ENABLED
+              value: "{{ .Values.tls.enabled }}"
+            - name: JPPF_TLS_STORE_TYPE
+              value: "{{ .Values.tls.storeType }}"
+
+          ports:
+            - name: http
+              containerPort: 8080
+              hostPort: 8080
+              protocol: TCP
+
+          volumeMounts:
+            - name: tomcat-users
+              mountPath: /tomcat-conf
+            {{- if .Values.tls.enabled }}
+            - name: admin-tls-config
+              mountPath: /jppf-config
+            {{- end }}
+            {{- if .Values.admin.configOverrides }}
+            - name: admin-configuration
+              mountPath: /jppf-config-overrides
+            {{- end }}
+
+          resources:
+            {{- toYaml .Values.admin.resources | nindent 12 }}
+
+          {{- if .Values.admin.livenessProbe.enabled }}
+          livenessProbe:
+            httpGet:
+              path: /alive
+              port: http
+            {{- with .Values.admin.livenessProbe }}
+            initialDelaySeconds: {{ default 30 .initialDelaySeconds }}
+            periodSeconds: {{ default 15 .periodSeconds }}
+            timeoutSeconds: {{ default 10 .timeoutSeconds }}
+            {{- end }}
+          {{- end }}
+
+      volumes:
+        - name: tomcat-users
+          secret:
+            secretName: tomcat-users
+            items:
+            - key: tomcatUsers
+              path: tomcat-users.xml
+        {{- if .Values.tls.enabled }}
+        - name: admin-tls-config
+          secret:
+            secretName: admin-tls-config
+            items:
+            - key: adminKeyStore
+              path: client_keystore.ks
+            - key: adminKeyStorePassword
+              path: client_keystore.txt
+            - key: driverTrustStore
+              path: driver_truststore.ks
+            - key: driverTrustStorePassword
+              path: driver_truststore.txt
+        {{- end }}
+        {{- if .Values.admin.configOverrides }}
+        - name: admin-configuration
+          configMap:
+            name: admin-configuration
+            items:
+            - key: configOverrides
+              path: config-overrides.properties
+        {{- end }}
+
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+{{- end }}

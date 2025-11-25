@@ -1,0 +1,104 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-node
+  labels:
+{{ include "jppf.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.node.replicas }}
+  selector:
+    matchLabels:
+      app: jppf
+      comp: node
+      release: "{{ .Release.Name }}"
+  template:
+    metadata:
+      labels:
+        app: jppf
+        comp: node
+        release: "{{ .Release.Name }}"
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.registryName }}/{{ .Values.node.imageRepository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+
+          env:
+            - name: JPPF_SUBNET
+              value: "172.16.238.0/24"
+            - name: JPPF_NODE_JVM_OPTIONS
+              value: "{{ .Values.node.jvmOptions }}"
+            - name: JPPF_VERSION
+              value: "{{ .Values.jppf.version }}"
+            - name: JPPF_SERVER_HOST
+              value: "{{ .Values.jppf.serverHostName }}"
+            - name: JPPF_PROCESSING_THREADS
+              value: "{{ .Values.node.processingThreads }}"
+            - name: JPPF_TLS_ENABLED
+              value: "{{ .Values.tls.enabled }}"
+            - name: JPPF_TLS_STORE_TYPE
+              value: "{{ .Values.tls.storeType }}"
+            - name: JPPF_SERIALIZATION
+              value: "{{ .Values.jppf.serialization }}"
+            - name: JPPF_NODE_MAX_JOBS
+              value: "{{ .Values.node.maxConcurrentJobs }}"
+            - name: JPPF_NODE_THROTTLING_ACTIVE
+              value: "{{ .Values.node.throttling.active }}"
+            - name: JPPF_NODE_THROTTLING_THRESHOLD
+              value: "{{ .Values.node.throttling.threshold }}"
+            - name: JPPF_NODE_THROTTLING_MAX_CHECKS_BEFORE_GC
+              value: "{{ .Values.node.throttling.maxChecksBeforeGC }}"
+
+          resources:
+            {{- toYaml .Values.node.resources | nindent 12 }}
+
+          volumeMounts:
+          {{- if .Values.tls.enabled }}
+            - name: node-tls-config
+              mountPath: /jppf-config
+          {{- end }}
+          {{- if .Values.node.configOverrides }}
+            - name: node-configuration
+              mountPath: /jppf-config-overrides
+          {{- end }}
+
+      volumes:
+        {{- if .Values.tls.enabled }}
+        - name: node-tls-config
+          secret:
+            secretName: node-tls-config
+            items:
+            - key: nodeKeyStore
+              path: node_keystore.ks
+            - key: nodeKeyStorePassword
+              path: node_keystore.txt
+            - key: driverTrustStore
+              path: driver_truststore.ks
+            - key: driverTrustStorePassword
+              path: driver_truststore.txt
+        {{- end }}
+        {{- if .Values.node.configOverrides }}
+        - name: node-configuration
+          configMap:
+            name: node-configuration
+            items:
+            - key: configOverrides
+              path: config-overrides.properties
+        {{- end }}
+
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
