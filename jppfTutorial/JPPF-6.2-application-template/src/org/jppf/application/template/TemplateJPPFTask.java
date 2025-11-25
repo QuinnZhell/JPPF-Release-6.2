@@ -54,13 +54,15 @@ public class TemplateJPPFTask extends AbstractTask<String> {
    */
   @Override
   public void run() {
-    // write your task code here.
-    System.out.println("Hello, this is the node executing a template JPPF task");
-    System.out.println("This task has been edited.");
-
-    // ...
-
-    // eventually set the execution results
-    setResult("the execution was performed successfully");
+    System.out.println("Modified Code.");
+    
+    try {
+    	Thread.sleep(3000);
+    } catch (InterruptedException e) {
+    	setThrowable(e);
+    	return;
+    }
+    
+    setResult("Execution Successful.");
   }
 }

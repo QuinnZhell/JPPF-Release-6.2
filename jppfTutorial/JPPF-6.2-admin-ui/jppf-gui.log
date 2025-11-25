@@ -1,0 +1,106 @@
+2025-11-25 16:48:45,456 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2025-11-25 16:48:46,013 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2025-11-25 16:48:46,013 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2025-11-25 16:48:46,014 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=508181, UUID=B0750421-7C4E-4765-A446-861CC52A9C4E
+2025-11-25 16:48:46,014 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2025-11-25 16:48:46,015 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2025-11-25 16:48:46,016 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2025-11-25 16:48:46,019 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2025-11-25 16:48:46,457 [ERROR][org.jppf.ui.monitoring.charts.config.PreferencesStorage.loadChartConfiguration(172)]: No enum constant org.jppf.ui.monitoring.charts.ChartType.CHART_DIFFERENCE
+java.lang.IllegalArgumentException: No enum constant org.jppf.ui.monitoring.charts.ChartType.CHART_DIFFERENCE
+	at java.base/java.lang.Enum.valueOf(Enum.java:240)
+	at org.jppf.ui.monitoring.charts.ChartType.valueOf(ChartType.java:24)
+	at org.jppf.ui.monitoring.charts.config.PreferencesStorage.loadChartConfiguration(PreferencesStorage.java:170)
+	at org.jppf.ui.monitoring.charts.config.PreferencesStorage.loadTabCharts(PreferencesStorage.java:134)
+	at org.jppf.ui.monitoring.charts.config.PreferencesStorage.loadChartConfigurations(PreferencesStorage.java:79)
+	at org.jppf.ui.monitoring.charts.config.PreferencesStorage.loadDefaultChartConfigurations(PreferencesStorage.java:109)
+	at org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.createInitialCharts(JPPFChartBuilder.java:244)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:229)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:121)
+	at Script12.run(Script12.groovy:30)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:305)
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:50)
+	at java.scripting/javax.script.CompiledScript.eval(CompiledScript.java:89)
+	at org.jppf.scripting.ScriptRunnerImpl.evaluate(ScriptRunnerImpl.java:125)
+	at org.jppf.scripting.ScriptDefinition.evaluate(ScriptDefinition.java:184)
+	at org.jppf.scripting.ScriptDefinition.evaluate(ScriptDefinition.java:162)
+	at org.jppf.ui.options.event.ScriptedValueChangeListener.valueChanged(ScriptedValueChangeListener.java:100)
+	at org.jppf.ui.options.xml.OptionsPageBuilder.triggerLifeCycleEvents(OptionsPageBuilder.java:166)
+	at org.jppf.ui.options.xml.OptionsPageBuilder.triggerLifeCycleEvents(OptionsPageBuilder.java:169)
+	at org.jppf.ui.options.xml.OptionsPageBuilder.triggerLifeCycleEvents(OptionsPageBuilder.java:169)
+	at org.jppf.ui.options.xml.OptionsPageBuilder.triggerLifeCycleEvents(OptionsPageBuilder.java:169)
+	at org.jppf.ui.options.xml.OptionsPageBuilder.triggerLifeCycleEvents(OptionsPageBuilder.java:169)
+	at org.jppf.ui.options.xml.OptionsPageBuilder.triggerInitialEvents(OptionsPageBuilder.java:138)
+	at org.jppf.ui.monitoring.ConsoleLauncher.loadUI(ConsoleLauncher.java:167)
+	at org.jppf.ui.monitoring.ConsoleLauncher.main(ConsoleLauncher.java:100)
+	at org.jppf.ui.console.JPPFAdminConsole.main(JPPFAdminConsole.java:65)
+2025-11-25 16:48:46,819 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2025-11-25 16:48:51,828 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.1.253:11111
+2025-11-25 16:48:51,830 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2025-11-25 16:48:51,834 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.1.253:11111
+2025-11-25 16:48:51,841 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2025-11-25 16:48:51,847 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2025-11-25 16:48:51,848 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2025-11-25 16:48:51,857 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
+	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
+	at org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(JPPFChartBuilder.java:205)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2025-11-25 16:48:51,857 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
+	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
+	at org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(JPPFChartBuilder.java:205)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2025-11-25 16:48:51,858 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
+	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
+	at org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(JPPFChartBuilder.java:205)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2025-11-25 16:51:20,004 [INFO ][org.jppf.client.JPPFClient.close(372)]: closing org.jppf.client.JPPFClient@1be9e06f
+2025-11-25 16:51:20,005 [INFO ][org.jppf.client.AbstractGenericClient.close(286)]: closing JPPF client with uuid=B0750421-7C4E-4765-A446-861CC52A9C4E, PID=508181

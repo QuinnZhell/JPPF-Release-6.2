@@ -69,21 +69,16 @@ public class TemplateApplicationRunner {
    * @throws Exception if an error occurs while creating the job or adding tasks.
    */
   public JPPFJob createJob(final String jobName) throws Exception {
-    // create a JPPF job
-    final JPPFJob job = new JPPFJob();
-    // give this job a readable name that we can use to monitor and manage it.
-    job.setName(jobName);
-
-    // add a task to the job.
-    final Task<?> task = job.add(new TemplateJPPFTask());
-    // provide a user-defined name for the task
-    task.setId(jobName + " - Template task");
-
-    // add more tasks here ...
-
-    // there is no guarantee on the order of execution of the tasks,
-    // however the results are guaranteed to be returned in the same order as the tasks.
-    return job;
+    JPPFJob job = new JPPFJob();
+    
+    job.setName("Template Job Id");
+    
+    for(int i = 0; i <10; i++) {
+    	job.add(new TemplateJPPFTask());
+    }
+    
+    job.getSLA().setSuspended(true);
+	return job;
   }
 
   /**
