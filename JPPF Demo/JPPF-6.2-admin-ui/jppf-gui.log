@@ -1,0 +1,88 @@
+2025-12-08 19:12:11,689 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2025-12-08 19:12:11,886 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2025-12-08 19:12:11,887 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2025-12-08 19:12:11,887 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=697687, UUID=E5BB6A7B-82C5-4BB7-8A62-AB3730555939
+2025-12-08 19:12:11,887 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2025-12-08 19:12:11,888 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2025-12-08 19:12:11,888 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2025-12-08 19:12:11,891 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2025-12-08 19:12:12,157 [WARN ][org.jppf.utils.JPPFDefaultUncaughtExceptionHandler.uncaughtException(43)]: Uncaught exception in thread Thread[#1,main,5,main] : java.lang.ExceptionInInitializerError: null
+2025-12-08 19:12:12,385 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2025-12-08 19:12:12,803 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2025-12-08 19:12:12,805 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2025-12-08 19:12:12,810 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2025-12-08 19:12:12,818 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2025-12-08 19:12:12,822 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2025-12-08 19:12:12,823 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2025-12-08 19:12:12,827 [ERROR][org.jppf.ui.monitoring.data.NewConnectionTask.run(88)]: 
+java.lang.reflect.InvocationTargetException
+	at java.desktop/java.awt.EventQueue.invokeAndWait(EventQueue.java:1371)
+	at java.desktop/java.awt.EventQueue.invokeAndWait(EventQueue.java:1346)
+	at java.desktop/javax.swing.SwingUtilities.invokeAndWait(SwingUtilities.java:1480)
+	at org.jppf.ui.monitoring.data.NewConnectionTask.run(NewConnectionTask.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.runtime.InvokerHelper
+	at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+	at groovy.lang.Binding.<init>(Binding.java:35)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl$1.<init>(GroovyScriptEngineImpl.java:226)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:226)
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:50)
+	at java.scripting/javax.script.CompiledScript.eval(CompiledScript.java:93)
+	at org.jppf.scripting.ScriptRunnerImpl.evaluate(ScriptRunnerImpl.java:125)
+	at org.jppf.scripting.ScriptDefinition.evaluate(ScriptDefinition.java:184)
+	at org.jppf.scripting.ScriptDefinition.evaluate(ScriptDefinition.java:162)
+	at org.jppf.ui.options.event.ScriptedValueChangeListener.valueChanged(ScriptedValueChangeListener.java:100)
+	at org.jppf.ui.options.AbstractOption.fireValueChanged(AbstractOption.java:102)
+	at org.jppf.ui.options.ComboBoxOption$1.actionPerformed(ComboBoxOption.java:126)
+	at java.desktop/javax.swing.JComboBox.fireActionEvent(JComboBox.java:1294)
+	at java.desktop/javax.swing.JComboBox.contentsChanged(JComboBox.java:1367)
+	at java.desktop/javax.swing.AbstractListModel.fireContentsChanged(AbstractListModel.java:127)
+	at java.desktop/javax.swing.DefaultComboBoxModel.setSelectedItem(DefaultComboBoxModel.java:94)
+	at java.desktop/javax.swing.DefaultComboBoxModel.addElement(DefaultComboBoxModel.java:132)
+	at java.desktop/javax.swing.JComboBox.addItem(JComboBox.java:746)
+	at org.jppf.ui.monitoring.data.NewConnectionTask$ComboUpdate.run(NewConnectionTask.java:111)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:308)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at org.codehaus.groovy.runtime.InvokerHelper.<clinit>(InvokerHelper.java:47)
+	at groovy.lang.GroovyObjectSupport.<init>(GroovyObjectSupport.java:32)
+	at groovy.lang.Binding.<init>(Binding.java:35)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl$1.<init>(GroovyScriptEngineImpl.java:226)
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:226)
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:50)
+	at java.scripting/javax.script.CompiledScript.eval(CompiledScript.java:93)
+	at org.jppf.scripting.ScriptRunnerImpl.evaluate(ScriptRunnerImpl.java:125)
+	at org.jppf.scripting.ScriptDefinition.evaluate(ScriptDefinition.java:184)
+	at org.jppf.scripting.ScriptDefinition.evaluate(ScriptDefinition.java:162)
+	at org.jppf.ui.options.event.ScriptedValueChangeListener.valueChanged(ScriptedValueChangeListener.java:100)
+	at org.jppf.ui.options.AbstractOption.fireValueChanged(AbstractOption.java:102)
+	at org.jppf.ui.options.ComboBoxOption$1.actionPerformed(ComboBoxOption.java:126)
+	at java.desktop/javax.swing.JComboBox.fireActionEvent(JComboBox.java:1294)
+	at java.desktop/javax.swing.JComboBox.setSelectedItem(JComboBox.java:619)
+	at org.jppf.ui.options.ComboBoxOption.setValue(ComboBoxOption.java:114)
+	at org.jppf.ui.options.factory.OptionsHandler.loadPreferences(OptionsHandler.java:242)
+	at org.jppf.ui.options.factory.OptionsHandler.loadPreferences(OptionsHandler.java:236)
+	at org.jppf.ui.options.factory.OptionsHandler.loadPreferences(OptionsHandler.java:236)
+	at org.jppf.ui.options.factory.OptionsHandler.loadPreferences(OptionsHandler.java:236)
+	at org.jppf.ui.options.factory.OptionsHandler.loadPreferences(OptionsHandler.java:236)
+	at org.jppf.ui.options.factory.OptionsHandler.loadPreferences(OptionsHandler.java:236)
+	at org.jppf.ui.options.factory.OptionsHandler.loadPreferences(OptionsHandler.java:223)
+	at org.jppf.ui.monitoring.ConsoleLauncher.loadUI(ConsoleLauncher.java:166)
+	at org.jppf.ui.monitoring.ConsoleLauncher.main(ConsoleLauncher.java:100)
+	at org.jppf.ui.console.JPPFAdminConsole.main(JPPFAdminConsole.java:65)

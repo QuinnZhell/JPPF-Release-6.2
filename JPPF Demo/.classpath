@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Euler"/>
+	<classpathentry kind="src" path="JPPF-6.2-admin-ui"/>
+	<classpathentry kind="src" path="JPPF-6.2-driver"/>
+	<classpathentry kind="src" path="JPPF-6.2-node"/>
+	<classpathentry kind="src" path="JPPF Tutorial"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Euler/lib-src/jppf-client-src-6.2.jar" sourcepath="/client/src"/>
+	<classpathentry kind="lib" path="Euler/lib-src/jppf-common-src-6.2.jar" sourcepath="/common/src"/>
+	<classpathentry kind="lib" path="Euler/lib-src/jppf-jmxremote-nio-src-6.2.jar" sourcepath="/jmxremote-nio/src"/>
+	<classpathentry kind="lib" path="JPPF-6.2-admin-ui/lib-src/jppf-admin-src-6.2.jar" sourcepath="/admin/src"/>
+	<classpathentry kind="lib" path="JPPF-6.2-driver/lib-src/jppf-server-src-6.2.jar" sourcepath="/server/src"/>
+	<classpathentry kind="lib" path="JPPF-6.2-driver/lib-src/jppf-node-src-6.2.jar" sourcepath="/node/src"/>
+	<classpathentry kind="lib" path="Euler/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="Euler/lib/jppf-client-6.2.jar" sourcepath="/client"/>
+	<classpathentry kind="lib" path="Euler/lib/jppf-common-6.2.jar"/>
+	<classpathentry kind="lib" path="Euler/lib/jppf-jmxremote-nio-6.2.jar" sourcepath="/jmxremote-nio"/>
+	<classpathentry kind="lib" path="Euler/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="Euler/lib/lz4-java-1.6.0.jar"/>
+	<classpathentry kind="lib" path="Euler/lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="Euler/lib/slf4j-log4j12-1.7.25.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
