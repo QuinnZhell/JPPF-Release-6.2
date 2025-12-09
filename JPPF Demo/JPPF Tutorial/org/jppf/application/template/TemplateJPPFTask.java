@@ -54,7 +54,7 @@ public class TemplateJPPFTask extends AbstractTask<String> {
    */
   @Override
   public void run() {
-    System.out.println("Modified Code.");
+    System.out.println("Modified Code From Task.");
     
     try {
     	Thread.sleep(3000);

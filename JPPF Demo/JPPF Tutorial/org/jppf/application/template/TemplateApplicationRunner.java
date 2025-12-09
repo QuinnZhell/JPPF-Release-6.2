@@ -77,7 +77,7 @@ public class TemplateApplicationRunner {
     	job.add(new TemplateJPPFTask());
     }
     
-    job.getSLA().setSuspended(true);
+    //job.getSLA().setSuspended(true);
 	return job;
   }
 

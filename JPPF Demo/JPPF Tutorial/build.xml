@@ -27,7 +27,7 @@
 	<property name="lib.dir"    value="${basedir}/lib"/>
 	<property name="config.dir"  value="${basedir}/config"/>
 	<property name="classes.dir" value="${basedir}/classes"/>	
-	<property name="src.dir"     value="${basedir}/src"/>
+	<property name="src.dir"     value="${basedir}/org"/>
 
 	<!-- ========================================================================= -->
 	<!--                           Classpath definitions                           -->

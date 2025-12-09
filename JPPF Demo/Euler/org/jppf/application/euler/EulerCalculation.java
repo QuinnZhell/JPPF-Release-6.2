@@ -6,6 +6,7 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class EulerCalculation implements Serializable {
 	public static int greatestCommonDivisor(int a, int b) {
+		System.out.printf("Greatest Common Divisor %d / %d \n", a, b);
 		if(a == 0) {
 			return b;
 		}
