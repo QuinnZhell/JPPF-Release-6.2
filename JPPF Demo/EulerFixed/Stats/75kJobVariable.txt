@@ -1,0 +1,112 @@
+Job Count: 1
+Iteration[0] Elapsed Time: 77328ms
+Iteration[1] Elapsed Time: 74601ms
+Iteration[2] Elapsed Time: 74954ms
+Iteration[3] Elapsed Time: 74930ms
+Iteration[4] Elapsed Time: 74818ms
+
+Job Count: 2
+Iteration[0] Elapsed Time: 57643ms
+Iteration[1] Elapsed Time: 60061ms
+Iteration[2] Elapsed Time: 60063ms
+Iteration[3] Elapsed Time: 59921ms
+Iteration[4] Elapsed Time: 60060ms
+
+Job Count: 3
+Iteration[0] Elapsed Time: 45747ms
+Iteration[1] Elapsed Time: 44952ms
+Iteration[2] Elapsed Time: 45068ms
+Iteration[3] Elapsed Time: 44986ms
+Iteration[4] Elapsed Time: 44970ms
+
+Job Count: 4
+Iteration[0] Elapsed Time: 36237ms
+Iteration[1] Elapsed Time: 35019ms
+Iteration[2] Elapsed Time: 34461ms
+Iteration[3] Elapsed Time: 35529ms
+Iteration[4] Elapsed Time: 35017ms
+
+Job Count: 5
+Iteration[0] Elapsed Time: 29189ms
+Iteration[1] Elapsed Time: 30014ms
+Iteration[2] Elapsed Time: 29971ms
+Iteration[3] Elapsed Time: 30023ms
+Iteration[4] Elapsed Time: 29952ms
+
+Job Count: 6
+Iteration[0] Elapsed Time: 25988ms
+Iteration[1] Elapsed Time: 24965ms
+Iteration[2] Elapsed Time: 24992ms
+Iteration[3] Elapsed Time: 25003ms
+Iteration[4] Elapsed Time: 25002ms
+
+Job Count: 7
+Iteration[0] Elapsed Time: 21948ms
+Iteration[1] Elapsed Time: 25005ms
+Iteration[2] Elapsed Time: 25003ms
+Iteration[3] Elapsed Time: 25009ms
+Iteration[4] Elapsed Time: 24977ms
+
+Job Count: 8
+Iteration[0] Elapsed Time: 22706ms
+Iteration[1] Elapsed Time: 20025ms
+Iteration[2] Elapsed Time: 19965ms
+Iteration[3] Elapsed Time: 20054ms
+Iteration[4] Elapsed Time: 19957ms
+
+Job Count: 9
+Iteration[0] Elapsed Time: 18226ms
+Iteration[1] Elapsed Time: 19902ms
+Iteration[2] Elapsed Time: 19998ms
+Iteration[3] Elapsed Time: 20093ms
+Iteration[4] Elapsed Time: 19905ms
+
+Job Count: 10
+Iteration[0] Elapsed Time: 18498ms
+Iteration[1] Elapsed Time: 15114ms
+Iteration[2] Elapsed Time: 14899ms
+Iteration[3] Elapsed Time: 15116ms
+Iteration[4] Elapsed Time: 14968ms
+
+Job Count: 11
+Iteration[0] Elapsed Time: 13935ms
+Iteration[1] Elapsed Time: 14728ms
+Iteration[2] Elapsed Time: 15025ms
+Iteration[3] Elapsed Time: 15266ms
+Iteration[4] Elapsed Time: 14940ms
+
+Job Count: 12
+Iteration[0] Elapsed Time: 13822ms
+Iteration[1] Elapsed Time: 15194ms
+Iteration[2] Elapsed Time: 14938ms
+Iteration[3] Elapsed Time: 14876ms
+Iteration[4] Elapsed Time: 15096ms
+
+Job Count: 13
+Iteration[0] Elapsed Time: 13998ms
+Iteration[1] Elapsed Time: 15100ms
+Iteration[2] Elapsed Time: 15204ms
+Iteration[3] Elapsed Time: 15105ms
+Iteration[4] Elapsed Time: 14608ms
+
+Job Count: 14
+Iteration[0] Elapsed Time: 14544ms
+Iteration[1] Elapsed Time: 15080ms
+Iteration[2] Elapsed Time: 14543ms
+Iteration[3] Elapsed Time: 15295ms
+Iteration[4] Elapsed Time: 15128ms
+
+Job Count: 15
+Iteration[0] Elapsed Time: 14010ms
+Iteration[1] Elapsed Time: 15069ms
+Iteration[2] Elapsed Time: 15206ms
+Iteration[3] Elapsed Time: 14686ms
+Iteration[4] Elapsed Time: 15008ms
+
+Job Count: 16
+Iteration[0] Elapsed Time: 14920ms
+Iteration[1] Elapsed Time: 9992ms
+Iteration[2] Elapsed Time: 9886ms
+Iteration[3] Elapsed Time: 9971ms
+Iteration[4] Elapsed Time: 10288ms
+

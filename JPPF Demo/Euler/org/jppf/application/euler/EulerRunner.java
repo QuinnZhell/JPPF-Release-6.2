@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.jppf.JPPFException;
+import org.jppf.application.eulerfixed.EulerRunner;
 import org.jppf.client.JPPFClient;
 import org.jppf.client.JPPFConnectionPool;
 import org.jppf.client.JPPFJob;
@@ -11,6 +12,11 @@ import org.jppf.node.protocol.Task;
 import org.jppf.utils.Operator;
 
 public class EulerRunner {
+	
+	long start;
+	long finish;
+	long timeElapsed;
+	long[] timeElapseCollection;
 
 	/**
 	* The entry point for this application runner to be run from a Java command line.
@@ -28,87 +34,85 @@ public class EulerRunner {
 		final EulerRunner runner = new EulerRunner();
 		print("runner started");
 		// create and execute a blocking job
-		//runner.executeBlockingEulerJob(jppfClient, 1000);
+		//runner.executeBlockingEulerJob(jppfClient, 10000);
 		
 		// create and execute a non-blocking job
-		//runner.executeNonBlockingEulerJob(jppfClient, 1000);
+		//runner.executeNonBlockingEulerJob(jppfClient, 100);
 		
 		// create and execute 3 jobs concurrently
-		runner.executeMultipleConcurrentEulerJobs(jppfClient, 10, 1000);
+		//runner.executeMultipleConcurrentEulerJobs(jppfClient, 16, 1000);
+		
+		long[] timeElapsedCollection = new long[5];
+		for(int jobs = 16; jobs <= 16; jobs++) {
+			System.out.println("Job Count: " + jobs);
+			
+			for(int i = 0; i < 5; i++) {
+				timeElapsedCollection[i] = runner.executeEulerJobParallelism(jppfClient, jobs, 10000);
+			}
+			
+			for(int i = 0; i < timeElapsedCollection.length; i++) {
+				System.out.println("Iteration " + i + ": " + timeElapsedCollection[i] + "ms.");
+			}
+		}
+		
+		
 		
 		} catch(final Exception e) {
 			e.printStackTrace();
 		}
 	}
-  
-	public static void print(String message) {
-	  System.out.println(message);
+	
+	public int[] getDivisionData(final int min, final int max, final int divisor) {
+		int range = (max - min) / divisor;
+		int[] divisions = new int[divisor + 1];
+		divisions[0] = min;
+		
+		int counter = min;
+		for(int i = 1; i < divisions.length; i++) {
+			counter += range;
+			divisions[i] = counter;
+		}
+		divisions[divisor] = max;
+		
+		return divisions;
 	}
-  
-  
-	public JPPFJob createEulerJob(final int lower, final int higher, final int range) throws JPPFException {
-		print("Creating Euler Job [" + lower + " - " + higher + "]");
-	  
+	
+	public JPPFJob createEulerJob(final int min, final int max) throws JPPFException {
 		JPPFJob job = new JPPFJob();
-		job.setName("Creating Euler Job [" + lower + " - " + higher + "]");
-	  
-		for(int i = lower; i < higher; i ++) {
-			job.add("greatestCommonDivisor", EulerCalculation.class, i, range);
+		
+		job.setName("Euler Sum: " + min + " -> " + max);
+		for(int i = min; i < max; i++) {
+			job.add("euler", EulerCalculation.class, i);
 		}
 	  
 		return job;
 	}
-  
-	public void executeBlockingEulerJob(final JPPFClient jppfClient, int range) throws Exception {
-		final JPPFJob job = createEulerJob(2, range, range);
-	    final List<Task<?>> results = jppfClient.submit(job);
-	    
-	    int totient = 1;
-	    totient += collectEulerResults(job.getName(), results);
-	    
-	    System.out.println("Totient(" + range + "): " + totient);
-	}
 	
-	public void executeNonBlockingEulerJob(final JPPFClient jppfClient, int range) throws Exception {
-	    final JPPFJob job = createEulerJob(2, range, range);
-	    jppfClient.submitAsync(job);
-	    
-	    final List<Task<?>> results = job.awaitResults();
-	    
-	    int totient = 1;
-	    totient += collectEulerResults(job.getName(), results);
-	    
-	    System.out.println("Totient(" + range + "): " + totient);
-	}
-	
-	public void executeMultipleConcurrentEulerJobs(final JPPFClient jppfClient, final int numberOfJobs, int range) throws Exception {
-	    ensureNumberOfConnections(jppfClient, numberOfJobs);
+	public long executeEulerJobParallelism(final JPPFClient jppfClient, final int numberOfJobs, int range) throws Exception {
+	    start = System.nanoTime();
+		ensureNumberOfConnections(jppfClient, 1);
 	    final List<JPPFJob> jobList = new ArrayList<>(numberOfJobs);
-	    int taskRange = range / numberOfJobs;
-	    int higher = 2;
 	    
-	    for(int i = 0; i < numberOfJobs; i++) {
-	    	int lower = higher;
-	    	higher += taskRange;
-	    	
-	    	if(higher > range) {
-	    		higher = range;
-	    	}
-	    	
-	    	final JPPFJob job = createEulerJob(lower, higher, range);
+	    int[] divisions = getDivisionData(2, range, numberOfJobs);
+	    for(int i = 1; i < divisions.length; i++) {
+	    	final JPPFJob job = createEulerJob(divisions[i-1], divisions[i]);
 	    	jppfClient.submitAsync(job);
 	    	jobList.add(job);
 	    }
-	    
 	    int totient = 1;
 	    for (final JPPFJob job: jobList) {
 	    	final List<Task<?>> results = job.awaitResults();
 	    	totient += collectEulerResults(job.getName(), results);
 	    }
 	    
-	    System.out.println("Totient(" + range + "): " + totient);
+	    finish = System.nanoTime();
+	    return (finish - start) / 1000000;
 	}
 	
+	public static void print(String message) {
+	  System.out.println(message);
+	}
+  
 	public void ensureNumberOfConnections(final JPPFClient jppfClient, final int numberOfConnections) throws Exception {
 	    final JPPFConnectionPool pool = jppfClient.awaitActiveConnectionPool();
 	    if (pool.getConnections().size() != numberOfConnections) {
@@ -121,12 +125,8 @@ public class EulerRunner {
 		int totient = 0;
 		for (final Task<?> task: results) {
 			Integer res = (Integer) task.getResult();
-			if(res == 1) {
-			totient++;
-			}
+			totient += res;
 		}
-		
-		System.out.printf("Results for job '%s' : %d \n", jobName, totient);
 		return totient;
 	}
 }

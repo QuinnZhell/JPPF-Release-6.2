@@ -49,13 +49,13 @@ public class TemplateApplicationRunner {
       final TemplateApplicationRunner runner = new TemplateApplicationRunner();
 
       // create and execute a blocking job
-      runner.executeBlockingJob(jppfClient);
+      //runner.executeBlockingJob(jppfClient);
 
       // create and execute a non-blocking job
       //runner.executeNonBlockingJob(jppfClient);
 
       // create and execute 3 jobs concurrently
-      //runner.executeMultipleConcurrentJobs(jppfClient, 3);
+      runner.executeMultipleConcurrentJobs(jppfClient, 3);
 
     } catch(final Exception e) {
       e.printStackTrace();
@@ -145,7 +145,7 @@ public class TemplateApplicationRunner {
   public void executeMultipleConcurrentJobs(final JPPFClient jppfClient, final int numberOfJobs) throws Exception {
     // ensure that the client connection pool has as many connections
     // as the number of jobs to execute
-    ensureNumberOfConnections(jppfClient, numberOfJobs);
+    ensureNumberOfConnections(jppfClient, 1);
 
     // this list will hold all the jobs submitted for execution,
     // so we can later collect and process their results

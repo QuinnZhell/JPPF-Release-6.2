@@ -1,0 +1,39 @@
+2026-01-20 21:00:32,282 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-01-20 21:00:32,326 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-01-20 21:00:32,326 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-01-20 21:00:32,326 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=478035, UUID=865BECF8-C15B-4F04-B6D8-EDA035C2522B
+2026-01-20 21:00:32,326 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-01-20 21:00:32,328 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2026-01-20 21:00:32,328 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2026-01-20 21:00:32,331 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-01-20 21:00:32,339 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-01-20 21:00:32,339 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-01-20 21:00:32,339 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=478035, UUID=B7F9BF14-3553-4E8D-80D7-7050FEF9D572
+2026-01-20 21:00:32,339 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-01-20 21:00:32,339 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2026-01-20 21:00:32,339 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-01-20 21:00:37,010 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2026-01-20 21:00:37,010 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2026-01-20 21:00:37,427 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
+2026-01-20 21:00:37,427 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-01-20 21:00:37,429 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-01-20 21:00:37,429 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-01-20 21:00:37,433 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
+2026-01-20 21:00:37,433 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-01-20 21:00:37,440 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-01-20 21:00:37,440 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-01-20 21:00:37,446 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2026-01-20 21:00:37,447 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2026-01-20 21:00:48,771 [INFO ][org.jppf.client.JPPFClient.close(372)]: closing org.jppf.client.JPPFClient@2d3fcdbd
+2026-01-20 21:00:48,772 [INFO ][org.jppf.client.AbstractGenericClient.close(286)]: closing JPPF client with uuid=B7F9BF14-3553-4E8D-80D7-7050FEF9D572, PID=478035
+2026-01-20 21:00:48,774 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-01-20 21:00:48,774 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-01-20 21:00:48,774 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=478035, UUID=6FD84B6A-211A-4664-9AA6-8FE32F1497C9
+2026-01-20 21:00:48,774 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-01-20 21:00:48,774 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2026-01-20 21:00:48,774 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-01-20 21:00:52,003 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2026-01-20 21:00:52,004 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-01-20 21:00:52,004 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-01-20 21:00:52,005 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-01-20 21:00:52,006 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
