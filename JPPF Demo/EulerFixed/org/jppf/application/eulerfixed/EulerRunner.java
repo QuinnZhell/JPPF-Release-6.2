@@ -21,8 +21,8 @@ public class EulerRunner {
 	long timeElapsed;
 	long[] timeElapseCollection;
 	final static int EULER_TARGET = 75000;
-	final static int MAX_JOBS = 1;
-	final static int TASK_COUNT = 16;
+	final static int MAX_JOBS = 16;
+	final static int TASK_COUNT = 1;
 	final static int ITERATION_COUNT = 5;
 
 	/**
@@ -43,13 +43,13 @@ public class EulerRunner {
 		
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter("results.txt"))) {
 			long[] timeElapsedCollection = new long[ITERATION_COUNT];
-			for(int jobs = 1; jobs <= TASK_COUNT; jobs++) {
+			for(int jobs = 16; jobs <= MAX_JOBS; jobs++) {
 				System.out.println("Job Count: " + jobs);
 				writer.write("Job Count: " + jobs + "\n");
 				
 				for(int i = 0; i < ITERATION_COUNT; i++) {
-					//timeElapsedCollection[i] = runner.createEulerJobs(EULER_TARGET, jobs);
-					timeElapsedCollection[i] = runner.createEulerThreads(EULER_TARGET, jobs);
+					timeElapsedCollection[i] = runner.createEulerJobs(EULER_TARGET, jobs);
+					//timeElapsedCollection[i] = runner.createEulerThreads(EULER_TARGET, jobs);
 				}
 				
 				for(int i = 0; i < timeElapsedCollection.length; i++) {

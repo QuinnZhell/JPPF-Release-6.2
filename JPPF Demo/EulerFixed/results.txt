@@ -1,0 +1,7 @@
+Job Count: 16
+Iteration[0] Elapsed Time: 12950ms
+Iteration[1] Elapsed Time: 14537ms
+Iteration[2] Elapsed Time: 14981ms
+Iteration[3] Elapsed Time: 14849ms
+Iteration[4] Elapsed Time: 9910ms
+
