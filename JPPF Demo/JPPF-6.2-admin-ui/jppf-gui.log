@@ -1,19 +1,19 @@
-2026-01-21 15:43:23,210 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
-2026-01-21 15:43:23,430 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
-2026-01-21 15:43:23,431 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
-2026-01-21 15:43:23,431 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=1285517, UUID=B2FEAD8D-F280-43B7-8A4F-80D48B9F0415
-2026-01-21 15:43:23,431 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
-2026-01-21 15:43:23,432 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
-2026-01-21 15:43:23,433 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
-2026-01-21 15:43:23,436 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
-2026-01-21 15:43:25,723 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
-2026-01-21 15:43:25,735 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-01-21 15:43:25,737 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
-2026-01-21 15:43:25,742 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-01-21 15:43:25,750 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
-2026-01-21 15:43:25,755 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
-2026-01-21 15:43:25,756 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
-2026-01-21 15:43:25,763 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+2026-02-04 00:27:34,990 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-02-04 00:27:35,184 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-02-04 00:27:35,184 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-02-04 00:27:35,185 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=1748303, UUID=FC95DFAC-814D-4F70-8CB3-5E81134A9448
+2026-02-04 00:27:35,185 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-02-04 00:27:35,186 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2026-02-04 00:27:35,187 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2026-02-04 00:27:35,189 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-02-04 00:27:38,492 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2026-02-04 00:27:38,507 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
+2026-02-04 00:27:38,509 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-02-04 00:27:38,513 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
+2026-02-04 00:27:38,520 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 00:27:38,525 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2026-02-04 00:27:38,526 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2026-02-04 00:27:38,532 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
 	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
@@ -32,7 +32,7 @@ java.lang.IllegalArgumentException: Series name >Idle nodes< has already been us
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-2026-01-21 15:43:25,764 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+2026-02-04 00:27:38,533 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
 	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
@@ -51,7 +51,7 @@ java.lang.IllegalArgumentException: Series name >Idle nodes< has already been us
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-2026-01-21 15:43:25,764 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+2026-02-04 00:27:38,533 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
 	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
@@ -70,33 +70,3 @@ java.lang.IllegalArgumentException: Series name >Idle nodes< has already been us
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-2026-01-21 16:36:43,839 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
-2026-01-21 16:36:43,840 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-1-1[192.168.0.177:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@39404c3d)]
-java.io.EOFException: could only read 0 bytes out of 4
-	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
-	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
-	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
-	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
-	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
-	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
-	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
-	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
-	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-2026-01-21 16:36:43,840 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-01-21 16:37:43,857 [ERROR][org.jppf.client.JPPFClientConnectionImpl.init(109)]: [jppf_discovery-1-1 - ClassServer] Could not reconnect to the class server
-org.jppf.JPPFException: [jppf_discovery-1-1 - ClassServer] Could not reconnect to the class server
-	at org.jppf.client.ClassServerDelegateImpl.init(ClassServerDelegateImpl.java:73)
-	at org.jppf.client.JPPFClientConnectionImpl.connect(JPPFClientConnectionImpl.java:122)
-	at org.jppf.client.JPPFClientConnectionImpl.init(JPPFClientConnectionImpl.java:103)
-	at org.jppf.client.ConnectionInitializer.run(ConnectionInitializer.java:56)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-2026-01-21 16:37:43,858 [ERROR][org.jppf.client.JPPFClientConnectionImpl.close(227)]: [jppf_discovery-1-1] Broken pipe (Write failed)

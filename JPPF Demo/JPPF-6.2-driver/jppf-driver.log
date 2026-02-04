@@ -1,46 +1,14 @@
-2026-01-21 15:43:10,092 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
-2026-01-21 15:43:10,153 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
-2026-01-21 15:43:10,153 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
-2026-01-21 15:43:10,153 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting driver with PID=1284704, UUID=DA9F9E54-5F11-4780-A742-266F83614413
-2026-01-21 15:43:10,153 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
-2026-01-21 15:43:10,599 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientClassNioServer(ClientClassServer)
-2026-01-21 15:43:10,647 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
-2026-01-21 15:43:10,649 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeClassNioServer(NodeClassServer)
-2026-01-21 15:43:10,652 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientNioServer(ClientJobServer)
-2026-01-21 15:43:10,654 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeNioServer(NodeJobServer)
-2026-01-21 15:43:10,659 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
-2026-01-21 15:43:10,663 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AcceptorNioServer(Acceptor)
-2026-01-21 15:43:10,680 [INFO ][org.jppf.management.diagnostics.Diagnostics.init(81)]: a heap dump collector could not be created for this JVM - no heap dumps will be available
-2026-01-21 15:43:10,692 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
-2026-01-21 15:46:15,696 [ERROR][org.jppf.nio.StatelessNioServer.performContextAction(334)]: 
-java.util.ConcurrentModificationException
-	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1469)
-	at java.util.HashMap$KeyIterator.next(HashMap.java:1493)
-	at java.util.Collections$UnmodifiableCollection$1.next(Collections.java:1044)
-	at java.util.AbstractCollection.addAll(AbstractCollection.java:343)
-	at java.util.HashSet.<init>(HashSet.java:120)
-	at org.jppf.nio.StatelessNioServer.performContextAction(StatelessNioServer.java:332)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassNioServer.closeConnection(AsyncClientClassNioServer.java:187)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassNioServer.closeConnection(AsyncClientClassNioServer.java:167)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassContext.handleException(AsyncClientClassContext.java:64)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassNioServer.handleSelectionException(AsyncClientClassNioServer.java:99)
-	at org.jppf.nio.StatelessNioServer$KeysetHandler.lambda$handle$0(StatelessNioServer.java:202)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-2026-01-21 16:06:45,879 [ERROR][org.jppf.nio.StatelessNioServer.performContextAction(334)]: 
-java.util.ConcurrentModificationException
-	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1469)
-	at java.util.HashMap$KeyIterator.next(HashMap.java:1493)
-	at java.util.Collections$UnmodifiableCollection$1.next(Collections.java:1044)
-	at java.util.AbstractCollection.addAll(AbstractCollection.java:343)
-	at java.util.HashSet.<init>(HashSet.java:120)
-	at org.jppf.nio.StatelessNioServer.performContextAction(StatelessNioServer.java:332)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassNioServer.closeConnection(AsyncClientClassNioServer.java:187)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassNioServer.closeConnection(AsyncClientClassNioServer.java:167)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassContext.handleException(AsyncClientClassContext.java:64)
-	at org.jppf.server.nio.classloader.client.AsyncClientClassNioServer.handleSelectionException(AsyncClientClassNioServer.java:99)
-	at org.jppf.nio.StatelessNioServer$KeysetHandler.lambda$handle$0(StatelessNioServer.java:202)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 00:26:42,873 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting driver with PID=1744747, UUID=773170FF-AFDF-4BE8-8A9D-01A42EF903AE
+2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-02-04 00:26:43,375 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientClassNioServer(ClientClassServer)
+2026-02-04 00:26:43,419 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2026-02-04 00:26:43,421 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeClassNioServer(NodeClassServer)
+2026-02-04 00:26:43,423 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientNioServer(ClientJobServer)
+2026-02-04 00:26:43,425 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeNioServer(NodeJobServer)
+2026-02-04 00:26:43,429 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-02-04 00:26:43,432 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AcceptorNioServer(Acceptor)
+2026-02-04 00:26:43,450 [INFO ][org.jppf.management.diagnostics.Diagnostics.init(81)]: a heap dump collector could not be created for this JVM - no heap dumps will be available
+2026-02-04 00:26:43,461 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
