@@ -7,8 +7,10 @@ import java.util.List;
 
 import org.jppf.JPPFException;
 import org.jppf.client.JPPFClient;
+import org.jppf.client.JPPFConnectionPool;
 import org.jppf.client.JPPFJob;
 import org.jppf.node.protocol.Task;
+import org.jppf.utils.Operator;
 
 public class EulerTunedRunner {
 	
@@ -16,9 +18,10 @@ public class EulerTunedRunner {
 	static long finish;
 	long timeElapsed;
 	long[] timeElapseCollection;
-	final static int EULER_TARGET = 75000;
+	final static int EULER_TARGET = 25000;
 	final static int MAX_JOBS = 16;
 	final static int ITERATION_COUNT = 1;
+	final static int MIN_TASK_RANGE = 1;
 	
 	public static void main(final String...args) {
 		long timeElapsed = 0; //TODO: UN-INIT
@@ -53,24 +56,32 @@ public class EulerTunedRunner {
 		int range = (int) (eulerTarget / Math.pow(2, power));
 		int lower = 0;
 		int higher = lower + range;
-		System.out.println("Euler Job " + power + ": [" + lower + " , " + higher + "], range: " + range);
-		
 		
 		final List<JPPFJob> jobList = new ArrayList<>();
-		while(power > 0) {
+		while(range > MIN_TASK_RANGE) {
+			System.out.println("Euler Job " + power + ": [" + lower + " , " + higher + "], range: " + range);
 			JPPFJob newJob = createTunedEulerJob(jppfClient, lower, higher);
 			jppfClient.submitAsync(newJob);
+			jobList.add(newJob);
 			
-			range = (int) (eulerTarget / Math.pow(2, power++));
+			range = (int) (eulerTarget / Math.pow(2, ++power));
 			lower = higher;
 			higher = higher + range;
-			System.out.println("Euler Job " + power + ": [" + lower + " , " + higher + "], range: " + range);
-			
-			if(higher > eulerTarget) {
-				JPPFJob finalJob = createTunedEulerJob(jppfClient, lower, eulerTarget);
-				jppfClient.submitAsync(finalJob);
-				power = -1;
-			}
+		}
+		
+		for(int i = lower; i < eulerTarget; i++) {
+			System.out.println("Euler Job: [" + i + " , " + (i+1) + "], range: " + MIN_TASK_RANGE);
+			JPPFJob newJob = createTunedEulerJob(jppfClient, i, i+1);
+			jppfClient.submitAsync(newJob);
+			jobList.add(newJob);
+		}
+		
+		
+		try {
+			System.out.println("Job Count: " + jobList.size());
+			ensureNumberOfConnections(jppfClient, jobList.size());
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		
 		int sumResult = 1;
@@ -95,6 +106,20 @@ public class EulerTunedRunner {
 		}
 		return job;
 	}
+	
+	  public static void ensureNumberOfConnections(final JPPFClient jppfClient, final int numberOfConnections) throws Exception {
+		    // wait until the client has at least one connection pool with at least one avaialable connection
+		    final JPPFConnectionPool pool = jppfClient.awaitActiveConnectionPool();
+
+		    // if the pool doesn't have the expected number of connections, change its size
+		    if (pool.getConnections().size() != numberOfConnections) {
+		      // set the pool size to the desired number of connections
+		      pool.setSize(numberOfConnections);
+		    }
+
+		    // wait until all desired connections are available (ACTIVE status)
+		    pool.awaitActiveConnections(Operator.AT_LEAST, numberOfConnections);
+		  }
 	
 	public static int processExecutionResults(final List<Task<?>> results) {
 		int sumResult = 0;

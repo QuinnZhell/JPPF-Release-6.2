@@ -18,6 +18,7 @@ public class EulerTunedTask {
 				result++;
 			}
 		}
+		System.out.println("Euler("+n+"): " + result);
 		return result;
 	}
 }

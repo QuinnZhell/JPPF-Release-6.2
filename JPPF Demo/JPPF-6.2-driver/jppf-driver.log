@@ -1,14 +1,17 @@
-2026-02-04 00:26:42,873 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
-2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
-2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
-2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting driver with PID=1744747, UUID=773170FF-AFDF-4BE8-8A9D-01A42EF903AE
-2026-02-04 00:26:42,930 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
-2026-02-04 00:26:43,375 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientClassNioServer(ClientClassServer)
-2026-02-04 00:26:43,419 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
-2026-02-04 00:26:43,421 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeClassNioServer(NodeClassServer)
-2026-02-04 00:26:43,423 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientNioServer(ClientJobServer)
-2026-02-04 00:26:43,425 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeNioServer(NodeJobServer)
-2026-02-04 00:26:43,429 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
-2026-02-04 00:26:43,432 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AcceptorNioServer(Acceptor)
-2026-02-04 00:26:43,450 [INFO ][org.jppf.management.diagnostics.Diagnostics.init(81)]: a heap dump collector could not be created for this JVM - no heap dumps will be available
-2026-02-04 00:26:43,461 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2026-02-04 01:33:19,767 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting driver with PID=2179509, UUID=A27F5CD7-66B8-42E1-959B-460E57DA3A27
+2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-02-04 01:33:19,881 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientClassNioServer(ClientClassServer)
+2026-02-04 01:33:19,911 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2026-02-04 01:33:19,913 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeClassNioServer(NodeClassServer)
+2026-02-04 01:33:19,915 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientNioServer(ClientJobServer)
+2026-02-04 01:33:19,917 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeNioServer(NodeJobServer)
+2026-02-04 01:33:19,922 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-02-04 01:33:19,926 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AcceptorNioServer(Acceptor)
+2026-02-04 01:33:19,942 [INFO ][org.jppf.management.diagnostics.Diagnostics.init(81)]: a heap dump collector could not be created for this JVM - no heap dumps will be available
+2026-02-04 01:33:19,950 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2026-02-04 01:33:55,635 [WARN ][org.jppf.server.nio.nodeserver.async.AsyncNodeNioServer.handleSelectionException(180)]: error [java.io.EOFException] on AsyncNodeContext[uuid=4559D2CC-8779-49D1-8DE8-DC8947D5AA04, peer=false, ssl=false, local=false, offline=false, maxJobs=2147483647, jobEntries=0, sendQueue size=0, interestOps=1, executionStatus=ACTIVE]
+2026-02-04 01:33:56,335 [WARN ][org.jppf.server.nio.nodeserver.async.AsyncNodeNioServer.handleSelectionException(180)]: error [java.io.EOFException] on AsyncNodeContext[uuid=9C710755-90E6-470C-B02D-74A7A3022EC4, peer=false, ssl=false, local=false, offline=false, maxJobs=2147483647, jobEntries=0, sendQueue size=0, interestOps=1, executionStatus=ACTIVE]
+2026-02-04 01:33:57,769 [WARN ][org.jppf.server.nio.nodeserver.async.AsyncNodeNioServer.handleSelectionException(180)]: error [java.io.EOFException] on AsyncNodeContext[uuid=C51395B0-7802-46F5-AD08-2404850C34B3, peer=false, ssl=false, local=false, offline=false, maxJobs=2147483647, jobEntries=0, sendQueue size=0, interestOps=1, executionStatus=ACTIVE]
