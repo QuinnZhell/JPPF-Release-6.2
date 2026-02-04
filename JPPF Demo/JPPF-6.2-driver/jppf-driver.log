@@ -1,17 +1,29 @@
-2026-02-04 01:33:19,767 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
-2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
-2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
-2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting driver with PID=2179509, UUID=A27F5CD7-66B8-42E1-959B-460E57DA3A27
-2026-02-04 01:33:19,846 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
-2026-02-04 01:33:19,881 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientClassNioServer(ClientClassServer)
-2026-02-04 01:33:19,911 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
-2026-02-04 01:33:19,913 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeClassNioServer(NodeClassServer)
-2026-02-04 01:33:19,915 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientNioServer(ClientJobServer)
-2026-02-04 01:33:19,917 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeNioServer(NodeJobServer)
-2026-02-04 01:33:19,922 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
-2026-02-04 01:33:19,926 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AcceptorNioServer(Acceptor)
-2026-02-04 01:33:19,942 [INFO ][org.jppf.management.diagnostics.Diagnostics.init(81)]: a heap dump collector could not be created for this JVM - no heap dumps will be available
-2026-02-04 01:33:19,950 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
-2026-02-04 01:33:55,635 [WARN ][org.jppf.server.nio.nodeserver.async.AsyncNodeNioServer.handleSelectionException(180)]: error [java.io.EOFException] on AsyncNodeContext[uuid=4559D2CC-8779-49D1-8DE8-DC8947D5AA04, peer=false, ssl=false, local=false, offline=false, maxJobs=2147483647, jobEntries=0, sendQueue size=0, interestOps=1, executionStatus=ACTIVE]
-2026-02-04 01:33:56,335 [WARN ][org.jppf.server.nio.nodeserver.async.AsyncNodeNioServer.handleSelectionException(180)]: error [java.io.EOFException] on AsyncNodeContext[uuid=9C710755-90E6-470C-B02D-74A7A3022EC4, peer=false, ssl=false, local=false, offline=false, maxJobs=2147483647, jobEntries=0, sendQueue size=0, interestOps=1, executionStatus=ACTIVE]
-2026-02-04 01:33:57,769 [WARN ][org.jppf.server.nio.nodeserver.async.AsyncNodeNioServer.handleSelectionException(180)]: error [java.io.EOFException] on AsyncNodeContext[uuid=C51395B0-7802-46F5-AD08-2404850C34B3, peer=false, ssl=false, local=false, offline=false, maxJobs=2147483647, jobEntries=0, sendQueue size=0, interestOps=1, executionStatus=ACTIVE]
+2026-02-04 03:43:55,594 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-02-04 03:43:55,645 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-02-04 03:43:55,645 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-02-04 03:43:55,645 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting driver with PID=2968388, UUID=F9AE0286-CC70-40A3-A7DB-9CF7154D0672
+2026-02-04 03:43:55,645 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-02-04 03:43:55,675 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientClassNioServer(ClientClassServer)
+2026-02-04 03:43:55,702 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2026-02-04 03:43:55,704 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeClassNioServer(NodeClassServer)
+2026-02-04 03:43:55,706 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientNioServer(ClientJobServer)
+2026-02-04 03:43:55,708 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeNioServer(NodeJobServer)
+2026-02-04 03:43:55,712 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-02-04 03:43:55,716 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AcceptorNioServer(Acceptor)
+2026-02-04 03:43:55,732 [INFO ][org.jppf.management.diagnostics.Diagnostics.init(81)]: a heap dump collector could not be created for this JVM - no heap dumps will be available
+2026-02-04 03:43:55,740 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2026-02-04 03:45:42,296 [ERROR][org.jppf.nio.StatelessNioServer.run(131)]: error in selector loop for AsyncClientNioServer : java.lang.OutOfMemoryError: GC overhead limit exceeded
+2026-02-04 03:45:42,296 [ERROR][org.jppf.nio.StatelessNioServer.run(131)]: error in selector loop for AsyncNodeNioServer : java.lang.OutOfMemoryError: GC overhead limit exceeded
+2026-02-04 03:45:42,569 [ERROR][org.jppf.server.nio.nodeserver.async.AsyncNodeMessageHandler.process(309)]: GC overhead limit exceeded
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+2026-02-04 03:45:42,611 [WARN ][org.jppf.server.nio.client.CompletionListener.taskCompleted(61)]: attempt to send bundle to invalid channel [FAILED toString()]
+bundle = ServerTaskBundleClient[id=68227, pendingTasks=0, taskList.size()=1, cancelled=false, done=true, job=JPPFTaskBundle[name=EulerSum[10000,15000], uuid=33A197F0-4B31-4D81-B307-2C390E9CC772, initialTaskCount=5000, taskCount=1, bundleUuid=null, uuidPath=TraversalList[position=0, list=[A7C50828-E845-4C08-9F27-2BB6B7452B51, F9AE0286-CC70-40A3-A7DB-9CF7154D0672]]]; strategy=NodeResults]
+2026-02-04 03:45:42,683 [WARN ][org.jppf.nio.NioMessageReader.run(152)]: error on channel AsyncNodeContext[uuid=416116A5-B903-4061-BF7A-DB94BC050193, peer=false, ssl=false, local=false, offline=false, maxJobs=2147483647, jobEntries=4611, sendQueue size=4567, interestOps=5, executionStatus=ACTIVE] : java.lang.OutOfMemoryError: GC overhead limit exceeded
+2026-02-04 03:45:49,823 [ERROR][org.jppf.nio.StatelessNioServer.go(153)]: java.lang.OutOfMemoryError: GC overhead limit exceeded
+java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.jppf.nio.StatelessNioServer.go(StatelessNioServer.java:151)
+	at org.jppf.nio.StatelessNioServer.run(StatelessNioServer.java:128)
+Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+2026-02-04 03:45:49,920 [ERROR][org.jppf.nio.StatelessNioServer.run(131)]: error in selector loop for AsyncClientClassNioServer : java.lang.OutOfMemoryError: GC overhead limit exceeded

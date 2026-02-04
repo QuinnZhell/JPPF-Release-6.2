@@ -1,0 +1,11 @@
+Iteration[0] Elapsed Time: 1823ms
+Iteration[1] Elapsed Time: 665ms
+Iteration[2] Elapsed Time: 642ms
+Iteration[3] Elapsed Time: 624ms
+Iteration[4] Elapsed Time: 653ms
+Iteration[5] Elapsed Time: 628ms
+Iteration[6] Elapsed Time: 695ms
+Iteration[7] Elapsed Time: 619ms
+Iteration[8] Elapsed Time: 632ms
+Iteration[9] Elapsed Time: 624ms
+

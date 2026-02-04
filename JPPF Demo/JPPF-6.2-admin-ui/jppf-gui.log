@@ -1,19 +1,19 @@
-2026-02-04 01:30:20,494 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
-2026-02-04 01:30:20,658 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
-2026-02-04 01:30:20,659 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
-2026-02-04 01:30:20,659 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=2133692, UUID=A07EBC8B-A0DE-463E-A6EE-0F13BE7BC9D5
-2026-02-04 01:30:20,659 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
-2026-02-04 01:30:20,660 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
-2026-02-04 01:30:20,661 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
-2026-02-04 01:30:20,663 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
-2026-02-04 01:30:24,003 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
-2026-02-04 01:30:24,419 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:30:24,421 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
-2026-02-04 01:30:24,425 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:30:24,432 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:30:24,437 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
-2026-02-04 01:30:24,438 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
-2026-02-04 01:30:24,444 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+2026-02-04 03:28:00,178 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-02-04 03:28:00,340 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-02-04 03:28:00,340 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-02-04 03:28:00,340 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=2868370, UUID=FB3E74EA-ECDB-49EC-B7CB-4A1BEA92B850
+2026-02-04 03:28:00,340 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-02-04 03:28:00,341 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2026-02-04 03:28:00,342 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2026-02-04 03:28:00,344 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-02-04 03:28:04,670 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2026-02-04 03:28:04,683 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-02-04 03:28:04,686 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:28:04,690 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-02-04 03:28:04,697 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:28:04,702 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2026-02-04 03:28:04,703 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2026-02-04 03:28:04,710 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
 	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
@@ -32,7 +32,7 @@ java.lang.IllegalArgumentException: Series name >Idle nodes< has already been us
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-2026-02-04 01:30:24,444 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+2026-02-04 03:28:04,711 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
 	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
@@ -51,7 +51,7 @@ java.lang.IllegalArgumentException: Series name >Idle nodes< has already been us
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-2026-02-04 01:30:24,444 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
+2026-02-04 03:28:04,711 [ERROR][org.jppf.ui.monitoring.charts.config.JPPFChartBuilder.lambda$dataUpdated$0(207)]: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 java.lang.IllegalArgumentException: Series name >Idle nodes< has already been used. Use unique names for each series!!!
 	at org.knowm.xchart.PieChart.addSeries(PieChart.java:81)
 	at org.jppf.ui.monitoring.charts.XChartPieHandler.populateDataset(XChartPieHandler.java:72)
@@ -70,28 +70,8 @@ java.lang.IllegalArgumentException: Series name >Idle nodes< has already been us
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-2026-02-04 01:31:06,483 [ERROR][org.jppf.ui.treetable.TreeTableModelAdapter.setSelectedPaths(267)]: 
-java.lang.NullPointerException
-	at javax.swing.tree.DefaultTreeSelectionModel.setSelectionPaths(DefaultTreeSelectionModel.java:273)
-	at javax.swing.JTree.setSelectionPaths(JTree.java:1654)
-	at org.jppf.ui.treetable.TreeTableModelAdapter.setSelectedPaths(TreeTableModelAdapter.java:265)
-	at org.jppf.ui.treetable.TreeTableModelAdapter$3.run(TreeTableModelAdapter.java:240)
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-2026-02-04 01:33:09,128 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
-2026-02-04 01:33:09,129 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-1-1[192.168.0.177:11111] (id=1) : DISCONNECTED (JPPFClientConnectionImpl@4e414ef0)]
+2026-02-04 03:28:32,438 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
+2026-02-04 03:28:32,439 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-1-1[192.168.0.69:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@3eb05d75)]
 java.io.EOFException: could only read 0 bytes out of 4
 	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
 	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
@@ -107,14 +87,263 @@ java.io.EOFException: could only read 0 bytes out of 4
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
-2026-02-04 01:33:09,129 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:19,970 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-2-1] created
-2026-02-04 01:33:19,971 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-2-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
-2026-02-04 01:33:19,972 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-2-1 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:20,025 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-2-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
-2026-02-04 01:33:20,030 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-2-1 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:20,133 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:20,142 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:20,148 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:51,227 [INFO ][org.jppf.client.JPPFClient.close(372)]: closing org.jppf.client.JPPFClient@424114d
-2026-02-04 01:33:51,228 [INFO ][org.jppf.client.AbstractGenericClient.close(286)]: closing JPPF client with uuid=A07EBC8B-A0DE-463E-A6EE-0F13BE7BC9D5, PID=2133692
+2026-02-04 03:28:32,439 [ERROR][org.jppf.jmxremote.nio.JMXNioServer.handleSelectionException(140)]: error on ChannelsPair[readingChannelID=1, writingChannelID=2, connectionID=jppf://[0:0:0:0:0:0:0:0]:11111 2, closed=false, closing=false, serverSide=false, socketChannel=java.nio.channels.SocketChannel[connected local=/192.168.0.69:55120 remote=/192.168.0.69:11111]] :
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:79)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:56)
+	at org.jppf.io.MultipleBuffersLocation.nonBlockingTransferFrom(MultipleBuffersLocation.java:176)
+	at org.jppf.io.MultipleBuffersLocation.transferFrom(MultipleBuffersLocation.java:141)
+	at org.jppf.nio.PlainNioObject.read(PlainNioObject.java:91)
+	at org.jppf.nio.SimpleNioMessage.read(SimpleNioMessage.java:55)
+	at org.jppf.jmxremote.nio.JMXContext.readMessage(JMXContext.java:208)
+	at org.jppf.jmxremote.nio.JMXMessageReader.doRead(JMXMessageReader.java:84)
+	at org.jppf.jmxremote.nio.JMXMessageReader.read(JMXMessageReader.java:71)
+	at org.jppf.jmxremote.nio.JMXNioServer.handleRead(JMXNioServer.java:117)
+	at org.jppf.nio.StatelessNioServer.lambda$initNioHandlers$1(StatelessNioServer.java:104)
+	at org.jppf.nio.StatelessNioServer$KeysetHandler.handle(StatelessNioServer.java:198)
+	at org.jppf.nio.StatelessNioServer.lambda$doOperation$3(StatelessNioServer.java:168)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:28:32,439 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-02-04 03:28:37,071 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-2-1] created
+2026-02-04 03:28:37,071 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-2-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
+2026-02-04 03:28:37,072 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-2-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:28:37,073 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-2-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
+2026-02-04 03:28:37,078 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-2-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:28:37,441 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:28:37,442 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-02-04 03:28:37,443 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:29:23,204 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-2-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
+2026-02-04 03:29:23,204 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-1-1[192.168.0.69:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@3eb05d75)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:29:23,204 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-2-1[192.168.0.177:11111] (id=2) : ACTIVE (JPPFClientConnectionImpl@5c893fe1)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:29:23,204 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
+2026-02-04 03:29:23,205 [ERROR][org.jppf.jmxremote.nio.JMXNioServer.handleSelectionException(140)]: error on ChannelsPair[readingChannelID=3, writingChannelID=4, connectionID=jppf://[0:0:0:0:0:0:0:0]:11111 1, closed=false, closing=false, serverSide=false, socketChannel=java.nio.channels.SocketChannel[connected local=/192.168.0.177:41758 remote=/192.168.0.177:11111]] :
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:79)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:56)
+	at org.jppf.io.MultipleBuffersLocation.nonBlockingTransferFrom(MultipleBuffersLocation.java:176)
+	at org.jppf.io.MultipleBuffersLocation.transferFrom(MultipleBuffersLocation.java:141)
+	at org.jppf.nio.PlainNioObject.read(PlainNioObject.java:91)
+	at org.jppf.nio.SimpleNioMessage.read(SimpleNioMessage.java:55)
+	at org.jppf.jmxremote.nio.JMXContext.readMessage(JMXContext.java:208)
+	at org.jppf.jmxremote.nio.JMXMessageReader.doRead(JMXMessageReader.java:84)
+	at org.jppf.jmxremote.nio.JMXMessageReader.read(JMXMessageReader.java:71)
+	at org.jppf.jmxremote.nio.JMXNioServer.handleRead(JMXNioServer.java:117)
+	at org.jppf.nio.StatelessNioServer.lambda$initNioHandlers$1(StatelessNioServer.java:104)
+	at org.jppf.nio.StatelessNioServer$KeysetHandler.handle(StatelessNioServer.java:198)
+	at org.jppf.nio.StatelessNioServer.lambda$doOperation$3(StatelessNioServer.java:168)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:29:23,205 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-02-04 03:29:23,205 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-2-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
+2026-02-04 03:29:46,211 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:29:46,211 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-2-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:29:46,213 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-2-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
+2026-02-04 03:29:46,213 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-02-04 03:29:46,216 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:29:46,216 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-2-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:30:45,571 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
+2026-02-04 03:30:45,571 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-2-1[192.168.0.177:11111] (id=2) : ACTIVE (JPPFClientConnectionImpl@5c893fe1)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:30:45,571 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-1-1[192.168.0.69:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@3eb05d75)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:30:45,571 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-2-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
+2026-02-04 03:30:45,571 [ERROR][org.jppf.jmxremote.nio.JMXNioServer.handleSelectionException(140)]: error on ChannelsPair[readingChannelID=7, writingChannelID=8, connectionID=jppf://[0:0:0:0:0:0:0:0]:11111 1, closed=false, closing=false, serverSide=false, socketChannel=java.nio.channels.SocketChannel[connected local=/192.168.0.177:59720 remote=/192.168.0.177:11111]] :
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:79)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:56)
+	at org.jppf.io.MultipleBuffersLocation.nonBlockingTransferFrom(MultipleBuffersLocation.java:176)
+	at org.jppf.io.MultipleBuffersLocation.transferFrom(MultipleBuffersLocation.java:141)
+	at org.jppf.nio.PlainNioObject.read(PlainNioObject.java:91)
+	at org.jppf.nio.SimpleNioMessage.read(SimpleNioMessage.java:55)
+	at org.jppf.jmxremote.nio.JMXContext.readMessage(JMXContext.java:208)
+	at org.jppf.jmxremote.nio.JMXMessageReader.doRead(JMXMessageReader.java:84)
+	at org.jppf.jmxremote.nio.JMXMessageReader.read(JMXMessageReader.java:71)
+	at org.jppf.jmxremote.nio.JMXNioServer.handleRead(JMXNioServer.java:117)
+	at org.jppf.nio.StatelessNioServer.lambda$initNioHandlers$1(StatelessNioServer.java:104)
+	at org.jppf.nio.StatelessNioServer$KeysetHandler.handle(StatelessNioServer.java:198)
+	at org.jppf.nio.StatelessNioServer.lambda$doOperation$3(StatelessNioServer.java:168)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:30:45,572 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-2-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
+2026-02-04 03:30:45,571 [ERROR][org.jppf.jmxremote.nio.JMXNioServer.handleSelectionException(140)]: error on ChannelsPair[readingChannelID=9, writingChannelID=10, connectionID=jppf://[0:0:0:0:0:0:0:0]:11111 2, closed=false, closing=false, serverSide=false, socketChannel=java.nio.channels.SocketChannel[connected local=/192.168.0.69:49810 remote=/192.168.0.69:11111]] :
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:79)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:56)
+	at org.jppf.io.MultipleBuffersLocation.nonBlockingTransferFrom(MultipleBuffersLocation.java:176)
+	at org.jppf.io.MultipleBuffersLocation.transferFrom(MultipleBuffersLocation.java:141)
+	at org.jppf.nio.PlainNioObject.read(PlainNioObject.java:91)
+	at org.jppf.nio.SimpleNioMessage.read(SimpleNioMessage.java:55)
+	at org.jppf.jmxremote.nio.JMXContext.readMessage(JMXContext.java:208)
+	at org.jppf.jmxremote.nio.JMXMessageReader.doRead(JMXMessageReader.java:84)
+	at org.jppf.jmxremote.nio.JMXMessageReader.read(JMXMessageReader.java:71)
+	at org.jppf.jmxremote.nio.JMXNioServer.handleRead(JMXNioServer.java:117)
+	at org.jppf.nio.StatelessNioServer.lambda$initNioHandlers$1(StatelessNioServer.java:104)
+	at org.jppf.nio.StatelessNioServer$KeysetHandler.handle(StatelessNioServer.java:198)
+	at org.jppf.nio.StatelessNioServer.lambda$doOperation$3(StatelessNioServer.java:168)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:30:45,572 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-02-04 03:31:23,581 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:31:23,581 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-2-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:31:23,583 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-2-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
+2026-02-04 03:31:23,583 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-02-04 03:31:23,586 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:31:23,586 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-2-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:32:16,337 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-2-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
+2026-02-04 03:32:16,337 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-2-1[192.168.0.177:11111] (id=2) : ACTIVE (JPPFClientConnectionImpl@5c893fe1)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:32:16,337 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=null, channel=jppf_discovery-1-1[192.168.0.69:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@3eb05d75)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:32:16,337 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.io.EOFException: could only read 0 bytes out of 4, will re-initialise ...
+2026-02-04 03:32:16,337 [ERROR][org.jppf.jmxremote.nio.JMXNioServer.handleSelectionException(140)]: error on ChannelsPair[readingChannelID=12, writingChannelID=14, connectionID=jppf://[0:0:0:0:0:0:0:0]:11111 2, closed=false, closing=false, serverSide=false, socketChannel=java.nio.channels.SocketChannel[connected local=/192.168.0.177:47126 remote=/192.168.0.177:11111]] :
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:79)
+	at org.jppf.io.ChannelInputSource.read(ChannelInputSource.java:56)
+	at org.jppf.io.MultipleBuffersLocation.nonBlockingTransferFrom(MultipleBuffersLocation.java:176)
+	at org.jppf.io.MultipleBuffersLocation.transferFrom(MultipleBuffersLocation.java:141)
+	at org.jppf.nio.PlainNioObject.read(PlainNioObject.java:91)
+	at org.jppf.nio.SimpleNioMessage.read(SimpleNioMessage.java:55)
+	at org.jppf.jmxremote.nio.JMXContext.readMessage(JMXContext.java:208)
+	at org.jppf.jmxremote.nio.JMXMessageReader.doRead(JMXMessageReader.java:84)
+	at org.jppf.jmxremote.nio.JMXMessageReader.read(JMXMessageReader.java:71)
+	at org.jppf.jmxremote.nio.JMXNioServer.handleRead(JMXNioServer.java:117)
+	at org.jppf.nio.StatelessNioServer.lambda$initNioHandlers$1(StatelessNioServer.java:104)
+	at org.jppf.nio.StatelessNioServer$KeysetHandler.handle(StatelessNioServer.java:198)
+	at org.jppf.nio.StatelessNioServer.lambda$doOperation$3(StatelessNioServer.java:168)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2026-02-04 03:32:16,337 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-02-04 03:32:16,337 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-2-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
+2026-02-04 03:32:18,338 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:32:18,338 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-2-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:32:18,368 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-2-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
+2026-02-04 03:32:18,412 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-02-04 03:32:18,420 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:32:18,420 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-2-1 - TasksServer] Reconnected to the JPPF task server

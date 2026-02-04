@@ -1,112 +1,15 @@
-2026-02-04 01:33:33,355 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
-2026-02-04 01:33:33,400 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
-2026-02-04 01:33:33,400 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
-2026-02-04 01:33:33,400 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=2180075, UUID=D2A9183E-00BC-484A-9322-F094250A56CC
-2026-02-04 01:33:33,400 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
-2026-02-04 01:33:33,402 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
-2026-02-04 01:33:33,403 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
-2026-02-04 01:33:33,405 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
-2026-02-04 01:33:34,977 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
-2026-02-04 01:33:34,991 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:34,993 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:34,997 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,006 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,012 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
-2026-02-04 01:33:35,012 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-2] created
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-3] created
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-4] created
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-5] created
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-2 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-6] created
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-4 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-3 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-5 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,013 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-7] created
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-6 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-3 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-8] created
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-4 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-5 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-6 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,014 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-9] created
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-2 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-7 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-8 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,014 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-10] created
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-7 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-9 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-8 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-11] created
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-9 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-10 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-12] created
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-10 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-13] created
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-14] created
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-12 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-15] created
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-16] created
-2026-02-04 01:33:35,015 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-12 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-14 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-13 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-15 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-17] created
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-15 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-11 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-18] created
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-13 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-4 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-17 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,016 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-14 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-16 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-2 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-3 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-19] created
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-18 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-17 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,017 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-11 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,018 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-16 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,018 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-18 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,020 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-6 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,021 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-20] created
-2026-02-04 01:33:35,021 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-19 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,022 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-20 - ClassServer] Attempting connection to the class server at 192.168.0.177:11111
-2026-02-04 01:33:35,022 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-19 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,022 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-20 - ClassServer] Reconnected to the class server
-2026-02-04 01:33:35,023 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-5 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,023 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-7 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,025 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-8 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,026 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-9 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,026 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-14 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,026 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-15 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,026 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-12 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,026 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-10 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,026 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-13 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,042 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-4 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,046 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-17 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,048 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-11 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,054 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-16 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,056 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-18 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,057 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-19 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,069 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-20 - TasksServer] Attempting connection to the task server at 192.168.0.177:11111
-2026-02-04 01:33:35,203 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-14 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,206 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-8 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,284 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-17 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,284 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-15 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,285 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-16 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,285 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-11 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,293 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-2 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,319 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-10 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,322 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-9 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,325 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-5 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,327 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-20 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,327 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-12 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,328 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-3 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,328 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-7 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,328 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-13 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,328 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-6 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,329 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-19 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:35,380 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-18 - TasksServer] Reconnected to the JPPF task server
-2026-02-04 01:33:41,273 [INFO ][org.jppf.client.JPPFClient.close(372)]: closing org.jppf.client.JPPFClient@68be2bc2
-2026-02-04 01:33:41,274 [INFO ][org.jppf.client.AbstractGenericClient.close(286)]: closing JPPF client with uuid=D2A9183E-00BC-484A-9322-F094250A56CC, PID=2180075
+2026-02-04 03:45:34,322 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-02-04 03:45:34,367 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-02-04 03:45:34,367 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-02-04 03:45:34,367 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=2979357, UUID=A7C50828-E845-4C08-9F27-2BB6B7452B51
+2026-02-04 03:45:34,367 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-02-04 03:45:34,370 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2026-02-04 03:45:34,370 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2026-02-04 03:45:34,373 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-02-04 03:45:35,770 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2026-02-04 03:45:36,185 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at 192.168.0.69:11111
+2026-02-04 03:45:36,187 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2026-02-04 03:45:36,191 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at 192.168.0.69:11111
+2026-02-04 03:45:36,199 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2026-02-04 03:45:36,203 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2026-02-04 03:45:36,209 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
