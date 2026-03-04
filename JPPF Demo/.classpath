@@ -24,6 +24,7 @@
 	<classpathentry kind="lib" path="Euler/lib/lz4-java-1.6.0.jar"/>
 	<classpathentry kind="lib" path="Euler/lib/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="Euler/lib/slf4j-log4j12-1.7.25.jar"/>
+	<classpathentry kind="lib" path="EulerFixed/lib/opencsv-5.12.0.jar"/>
 	<classpathentry kind="src" path="EulerFixed"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
