@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.jppf.JPPFException;
+import org.jppf.application.MonteCarlo.CountPointsTask;
 import org.jppf.application.eulerfixed.EulerRunner;
 import org.jppf.client.JPPFClient;
 import org.jppf.client.JPPFConnectionPool;
@@ -82,7 +83,7 @@ public class EulerRunner {
 		
 		job.setName("Euler Sum: " + min + " -> " + max);
 		for(int i = min; i < max; i++) {
-			job.add("euler", EulerCalculation.class, i);
+			job.add("euler", CountPointsTask.class, i);
 		}
 	  
 		return job;

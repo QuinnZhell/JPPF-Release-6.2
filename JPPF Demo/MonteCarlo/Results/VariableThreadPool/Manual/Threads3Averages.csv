@@ -1,0 +1,114 @@
+JPPF driver statistics,
+,
+Execution,
+,
+Total tasks executed,1000000
+Cumulated exec time,2.46E+08
+Latest exec time,113
+Min exec time,0
+Max exec time,750
+Avg exec time,245.956781
+,
+Node Execution,
+,
+Cumulated node exec time,2558047
+Latest node exec time,0
+Min node exec time,0
+Max node exec time,191
+Avg node exec time,2.558047
+,
+Network overhead,
+,
+Cumulated transport time,2.43E+08
+Latest transport time,113
+Min transport time,0
+Max transport time,749
+Avg transport time,243.398734
+,
+Jobs,
+,
+Total submitted jobs,18827
+Latest number of jobs,0
+Max number of jobs,100
+Latest job exec time,1121
+Min job exec time,0
+Max job exec time,1938
+Avg job exec time,554.868380517342
+Min number of tasks in a job,1
+Max number of tasks in a job,1
+Avg number of tasks in a job,1
+,
+Job dispatches,
+,
+Total job dispatches,1000000
+Latest job dispatches,0
+Max job dispatches,5771
+Latest dispatch time,114
+Min dispatch time,0
+Max dispatch time,751
+Avg dispatch time,246.556247
+Min tasks in a dispatch,1
+Max tasks in a dispatch,1
+Avg tasks in a dispatch,1
+,
+Tasks distribution,
+,
+Min number of tasks in a job,1
+Max number of tasks in a job,1
+Avg number of tasks in a job,1
+Min tasks in a dispatch,1
+Max tasks in a dispatch,1
+Avg tasks in a dispatch,1
+Min dispatches per job,1
+Max dispatches per job,100
+Avg dispatches per job,53.1152068837308
+,
+Queue,
+,
+Latest queue time,991
+Cumulated queue time,2.95E+08
+Min queue time,0
+Max queue time,1402
+Avg queue time,294.705683
+Total queued,1000000
+Queue Size,0
+Max queue Size,5971
+,
+Connections,
+,
+number of nodes,1
+Max number of nodes,1
+Idle nodes,1
+Busy nodes,0
+number of clients,-58
+Max number of clients,101
+,
+Node Class Loading,
+,
+Total requests from nodes,68
+Avg node request time,0.75
+Min node request time,0
+Max node request time,28
+Latest node request time,28
+,
+Client Class Loading,
+,
+Total requests to clients,2
+Avg client request time,12.7696845
+Min client request time,11.549862
+Max client request time,13.989507
+Latest client request time,11.549862
+,
+Inbound network traffic (MB),
+,
+Traffic from clients,3.48E+09
+Traffic from nodes,2.27E+09
+JMX inbound traffic,648514
+Total inbound traffic,5.75E+09
+,
+Outbound network traffic (MB),
+,
+Traffic to clients,2.15E+09
+Traffic to nodes,3.62E+09
+JMX outbound traffic,4.94E+09
+Total outbound traffic,1.07E+10

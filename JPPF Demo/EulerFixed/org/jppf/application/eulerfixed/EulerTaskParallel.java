@@ -20,37 +20,70 @@ public class EulerTaskParallel {
 	
 	static long start;
 	static long finish;
-	final static int EULER_TARGET = 20000;
-	static int TASK_COUNT = 1;
-	final static int ITERATION_COUNT = 5;
-	final static boolean SINGLE_TASK = false;
+	final static int EULER_TARGET = 10000;
+	static int TASK_COUNT = 16;
+	final static int ITERATION_COUNT = 10;
+	static boolean SINGLE_TASK = false;
 	
 	enum EulerConfig {
-		Tuned("EulerTuned") {
+		TunedSingleJobMultipleTask("TunedSingleJobMultipleTask", false) {
 			@Override
 			public long eulerSum(JPPFClient jppfClient, int eulerTarget) {
 				return createTunedEulerJob(jppfClient, EULER_TARGET);
 			}
 			
 		},
-		Naive("EulerNaive") {
+		TunedMultipleJobMultipleTask("TunedMultipleJobMultipleTask", false) {
+			@Override
+			public long eulerSum(JPPFClient jppfClient, int eulerTarget) {
+				return createTunedJobList(jppfClient, EULER_TARGET);
+			}
+		},
+		TunedMultipleJobSingleTask("TunedMultipleJobSingleTask", true) {
+			@Override
+			public long eulerSum(JPPFClient jppfClient, int eulerTarget) {
+				return createTunedJobList(jppfClient, EULER_TARGET);
+			}
+		},
+		NaiveSingleJobMultipleTask("NaiveSingleJobMultipleTask", false) {
 			@Override
 			public long eulerSum(JPPFClient jppfClient, int eulerTarget) {
 				return createNaiveEulerJob(jppfClient, EULER_TARGET);
 			}
 			
-		};
+		},
+		NaiveMultipleJobMultipleTask("NaiveMultipleJobMultipleTask", false) {
+			@Override
+			public long eulerSum(JPPFClient jppfClient, int eulerTarget) {
+				return createNaiveJobList(jppfClient, EULER_TARGET);
+			}
+			
+		},
+		NaiveMultipleJobSingleTask("NaiveMultipleJobSingleTask", true) {
+			@Override
+			public long eulerSum(JPPFClient jppfClient, int eulerTarget) {
+				return createNaiveJobList(jppfClient, EULER_TARGET);
+			}
+			
+		}
+		;
 		
 		private String name;
+		private boolean singleTask;
 		
-		private EulerConfig(String name) {
+		private EulerConfig(String name, boolean singleTask) {
 			this.name = name;
+			this.singleTask = singleTask;
 		}
 		
 		public abstract long eulerSum(JPPFClient jppfClient, int eulerTarget);
 		
 		public String getName() {
 			return name;
+		}
+		
+		public boolean isSingleTask() {
+			return singleTask;
 		}
 	}
 	
@@ -60,7 +93,8 @@ public class EulerTaskParallel {
 		try (final JPPFClient jppfClient = new JPPFClient()) {
 			
 			for(EulerConfig euler : EulerConfig.values()) {
-					File file = new File("Results/LoadBalance/rl2/"+ euler.getName() + "results.csv");
+					File file = new File("Results/ThreadPool/SingleJob_MultipleTask/ThreadPool_16/"+ euler.getName() + "results.csv");
+					SINGLE_TASK = euler.isSingleTask();
 					
 					try {
 						// create FileWriter object with file as parameter
@@ -69,11 +103,11 @@ public class EulerTaskParallel {
 				        // create CSVWriter object filewriter object as parameter
 				        CSVWriter writer = new CSVWriter(outputfile);
 				        
-				        //String[] header = {"Task Count" ,"Iteration 1 Elapsed Time (ms)", "Iteration 2 Elapsed Time (ms)", "Iteration 3 Elapsed Time (ms)", "Iteration 4 Elapsed Time (ms)", "Iteration 5 Elapsed Time (ms)", "Iteration 6 Elapsed Time (ms)", "Iteration 7 Elapsed Time (ms)", "Iteration 8 Elapsed Time (ms)", "Iteration 9 Elapsed Time (ms)", "Iteration 10 Elapsed Time (ms)", "Average Elapsed Time (ms)"};
-				        String[] header = {"Task Count" ,"Iteration 1 Elapsed Time (ms)", "Iteration 2 Elapsed Time (ms)", "Iteration 3 Elapsed Time (ms)", "Iteration 4 Elapsed Time (ms)", "Iteration 5 Elapsed Time (ms)", "Average Elapsed Time (ms)"};
+				        String[] header = {"Task Count" ,"Iteration 1 Elapsed Time (ms)", "Iteration 2 Elapsed Time (ms)", "Iteration 3 Elapsed Time (ms)", "Iteration 4 Elapsed Time (ms)", "Iteration 5 Elapsed Time (ms)", "Iteration 6 Elapsed Time (ms)", "Iteration 7 Elapsed Time (ms)", "Iteration 8 Elapsed Time (ms)", "Iteration 9 Elapsed Time (ms)", "Iteration 10 Elapsed Time (ms)", "Average Elapsed Time (ms)"};
+				        //String[] header = {"Task Count" ,"Iteration 1 Elapsed Time (ms)", "Iteration 2 Elapsed Time (ms)", "Iteration 3 Elapsed Time (ms)", "Iteration 4 Elapsed Time (ms)", "Iteration 5 Elapsed Time (ms)", "Average Elapsed Time (ms)"};
 				        writer.writeNext(header);
-				        for(int task = 1; task <= 20; task++) {
-				        	TASK_COUNT = task;
+				        //for(int task = 1; task <= 20; task++) {
+				        //	TASK_COUNT = task;
 				        
 					        // Experiment
 					        int elapsedTimeAverage = 0;
@@ -90,7 +124,7 @@ public class EulerTaskParallel {
 							resultData[11] = (elapsedTimeAverage / ITERATION_COUNT) + "";
 							writer.writeNext(resultData);
 						
-				        }
+				        //}
 						
 						writer.close();
 					}
@@ -103,6 +137,7 @@ public class EulerTaskParallel {
 		}
 	}
 	
+	// single job, multiple task
 	public static long createNaiveEulerJob(final JPPFClient jppfClient, int eulerRemaining) {
 		JPPFJob job = new JPPFJob();
 		job.setName("EulerSum["+eulerRemaining+"]");
@@ -152,6 +187,7 @@ public class EulerTaskParallel {
 		return (finish - start) / 1000000;
 	}
 	
+	// multiple job, multiple task
 	public static long createNaiveJobList(final JPPFClient jppfClient, int eulerRemaining) {
 		try {
 			ensureNumberOfConnections(jppfClient, TASK_COUNT);
@@ -216,6 +252,7 @@ public class EulerTaskParallel {
 		return (finish - start) / 1000000;
 	}
 	
+	// single job, multiple task
 	public static long createTunedEulerJob(final JPPFClient jppfClient, int eulerRemaining) {
 		JPPFJob job = new JPPFJob();
 		job.setName("EulerSum["+eulerRemaining+"]");
@@ -267,6 +304,7 @@ public class EulerTaskParallel {
 		return (finish - start) / 1000000;
 	}
 	
+	// multiple job, multiple task
 	public static long createTunedJobList(final JPPFClient jppfClient, int eulerRemaining) {
 		try {
 			ensureNumberOfConnections(jppfClient, TASK_COUNT);
