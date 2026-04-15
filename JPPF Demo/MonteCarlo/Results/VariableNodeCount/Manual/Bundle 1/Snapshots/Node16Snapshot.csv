@@ -1,0 +1,114 @@
+"JPPF driver statistics" 
+ 
+Execution 
+ 
+"Total tasks executed" 50000
+"Cumulated exec time" 5.10E+07
+"Latest exec time" 1
+"Min exec time" 0
+"Max exec time" 15644
+"Avg exec time" 1019.5526
+ 
+"Node Execution" 
+ 
+"Cumulated node exec time" 107763
+"Latest node exec time" 0
+"Min node exec time" 0
+"Max node exec time" 160
+"Avg node exec time" 2.15526
+ 
+"Network overhead" 
+ 
+"Cumulated transport time" 5.09E+07
+"Latest transport time" 1
+"Min transport time" 0
+"Max transport time" 15644
+"Avg transport time" 1017.39734
+ 
+Jobs 
+ 
+"Total submitted jobs" 549
+"Latest number of jobs" 0
+"Max number of jobs" 100
+"Latest job exec time" 154512
+"Min job exec time" 13
+"Max job exec time" 158471
+"Avg job exec time" 120396.659380692
+"Min number of tasks in a job" 1
+"Max number of tasks in a job" 1
+"Avg number of tasks in a job" 1
+ 
+"Job dispatches" 
+ 
+"Total job dispatches" 50000
+"Latest job dispatches" 0
+"Max job dispatches" 3572
+"Latest dispatch time" 414
+"Min dispatch time" 0
+"Max dispatch time" 19907
+"Avg dispatch time" 1165.15948
+"Min tasks in a dispatch" 1
+"Max tasks in a dispatch" 1
+"Avg tasks in a dispatch" 1
+ 
+"Tasks distribution" 
+ 
+"Min number of tasks in a job" 1
+"Max number of tasks in a job" 1
+"Avg number of tasks in a job" 1
+"Min tasks in a dispatch" 1
+"Max tasks in a dispatch" 1
+"Avg tasks in a dispatch" 1
+"Min dispatches per job" 1
+"Max dispatches per job" 100
+"Avg dispatches per job" 91.0746812386157
+ 
+Queue 
+ 
+"Latest queue time" 152851
+"Cumulated queue time" 3.90E+09
+"Min queue time" 0
+"Max queue time" 158196
+"Avg queue time" 78027.1219
+"Total queued" 50000
+"Queue Size" 0
+"Max queue Size" 9994
+ 
+Connections 
+ 
+"number of nodes" 16
+"Max number of nodes" 16
+"Idle nodes" 16
+"Busy nodes" 0
+"number of clients" -26
+"Max number of clients" 101
+ 
+"Node Class Loading" 
+ 
+"Total requests from nodes" 560
+"Avg node request time" 1.03571428571429
+"Min node request time" 0
+"Max node request time" 23
+"Latest node request time" 0
+ 
+"Client Class Loading" 
+ 
+"Total requests to clients" 3
+"Avg client request time" 4.522197
+"Min client request time" 2.032655
+"Max client request time" 5.941755
+"Latest client request time" 2.032655
+ 
+"Inbound network traffic (MB)" 
+ 
+"Traffic from clients" 1.74E+08
+"Traffic from nodes" 1.14E+08
+"JMX inbound traffic" 4232501
+"Total inbound traffic" 2.93E+08
+ 
+"Outbound network traffic (MB)" 
+ 
+"Traffic to clients" 1.09E+08
+"Traffic to nodes" 1.83E+08
+"JMX outbound traffic" 2.51E+08
+"Total outbound traffic" 5.43E+08

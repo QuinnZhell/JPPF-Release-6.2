@@ -10,20 +10,29 @@ import org.jppf.JPPFException;
 import org.jppf.client.JPPFClient;
 import org.jppf.client.JPPFConnectionPool;
 import org.jppf.client.JPPFJob;
+import org.jppf.client.monitoring.topology.TopologyManager;
 import org.jppf.utils.Operator;
 
 import com.opencsv.CSVWriter;
 
 public class MonteCarloRunner {
-	private final static int ITERATION_COUNT = 100;
+	private final static int ITERATION_COUNT = 5;
 	private final static int NUMBER_OF_POINTS = 1000000;
 	private final static int MAX_JOB_COUNT = 100;
 	private final static int MAX_TASK_COUNT = 100;
 	
-	private final static String CURRENT_TEST = "Threads4";
+	private final static String CURRENT_TEST = "Bundle1M/Node16/";
 	
 	public static void main(final String...args) {
 		try (final JPPFClient jppfClient = new JPPFClient()) {
+			jppfClient.setLocalExecutionEnabled(false);
+			
+			/**
+			 * RETRIEVE TOPOLOGY INFORMATION
+			 */
+			
+			TopologyManager manager = new TopologyManager(jppfClient);
+			
 			final MonteCarloRunner runner = new MonteCarloRunner();
 			
 			/**
@@ -37,7 +46,7 @@ public class MonteCarloRunner {
 		        for(int jobCount = 100; jobCount <= MAX_JOB_COUNT; jobCount++) {
 					try {
 						//File file = new File("Results/Nodes1/"+ "JobCount[" + jobCount + "]" + "results.csv");
-						File file = new File("Results/VariableThreadPool/Manual/"+ CURRENT_TEST + "Results.csv");
+						File file = new File("Results/VariableNodeCount/Manual/"+ CURRENT_TEST + "Results.csv");
 				        FileWriter outputfile = new FileWriter(file);
 				        CSVWriter writer = new CSVWriter(outputfile);
 				        
@@ -196,6 +205,9 @@ public class MonteCarloRunner {
 		}
 		
 		//job.getSLA().setSuspended(true);
+		//System.out.println(job.getClientSLA().getMaxDispatchSize());
+		//System.out.println(job.getSLA().getMaxDispatchSize());
+		//System.out.println(job.getTaskCount());
 		return job;
 	}
 	

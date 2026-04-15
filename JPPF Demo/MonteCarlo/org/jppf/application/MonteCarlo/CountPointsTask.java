@@ -11,6 +11,14 @@ public class CountPointsTask implements Serializable {
 
 	@JPPFRunnable
 	public static int countPoints(int n) {
+		//System.out.println("TASK GIVEN");
+		
+//		try {
+//			Thread.sleep(100000L);
+//		} catch (InterruptedException e) {
+//			return -1;
+//		}
+		
 		Random random = new Random();
 		int countInside = 0;
 		for(int i = 0; i < n; i++) {
