@@ -1,0 +1,13 @@
+2026-04-29 15:59:45,103 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-04-29 15:59:45,171 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-04-29 15:59:45,171 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-04-29 15:59:45,171 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting driver with PID=1285908, UUID=715CB49F-0FE8-4379-ABBA-737F9537A0AC
+2026-04-29 15:59:45,171 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2026-04-29 15:59:45,619 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientClassNioServer(ClientClassServer)
+2026-04-29 15:59:45,652 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2026-04-29 15:59:45,654 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeClassNioServer(NodeClassServer)
+2026-04-29 15:59:45,656 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncClientNioServer(ClientJobServer)
+2026-04-29 15:59:45,658 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AsyncNodeNioServer(NodeJobServer)
+2026-04-29 15:59:45,664 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2026-04-29 15:59:45,667 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing AcceptorNioServer(Acceptor)
+2026-04-29 15:59:45,693 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)

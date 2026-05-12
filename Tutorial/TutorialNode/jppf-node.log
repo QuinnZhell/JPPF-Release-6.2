@@ -1,0 +1,5 @@
+2026-04-29 16:00:04,669 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder /tmp/.jppf
+2026-04-29 16:00:04,731 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2026-04-29 16:00:04,732 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2026-04-29 16:00:04,732 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting node with PID=1289328, UUID=69002148-346C-48EB-ABED-AD13BFB5628A
+2026-04-29 16:00:04,732 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
